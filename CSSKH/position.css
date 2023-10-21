@@ -1,0 +1,32 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.box-normal{
+    width: 200px;
+    height: 200px;
+    background-color: dimgray;
+}
+.position-relative{
+    width: 200px;
+    height: 200px;
+    background-color: darkslateblue;
+    position: relative; /*position relative = dak vea sen terb dom lai top and left janh hz vea ot krob d'dob pi ler te*/
+    top: 10px;
+    left: 10px;
+}
+.position-absolute{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    position: absolute; /*position absolute = vea krob d'dob pi ler*/
+    top: 10px;
+    left: 10px;
+}
+.position-fixed{
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    position: fixed; /*position fixed = box nv ng d'dl scroll tv k vea ot tv dl*/
+}

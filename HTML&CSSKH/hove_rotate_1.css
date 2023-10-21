@@ -1,0 +1,23 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(242, 175, 175);
+}
+.container{
+    width: 500px;
+    height: 600px;
+    overflow: hidden; /*overflow: hidden = trong ng ber dak vea te pel rotate vea mk teng dol*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container img{
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+}
+.container:hover img{
+    transform: scale(1.4) rotate(20deg); /*rotate = tver oy vea veal*/
+    cursor: pointer;
+}

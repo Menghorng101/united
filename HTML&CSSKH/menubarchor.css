@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: gray;
+}
+.menubar{
+    width: 200px;
+    height: 100vh;
+    background-color:lightgray;
+    float: left; /* brer (float: left;) oy vea kob dl kang ler*/
+}
+.menubar ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menubar ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 20px 20px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-transform:  capitalize;
+    transition: all .3s linear;
+}
+.menubar ul:hover li a{
+    opacity: .3;/*opacity: .4--> som reab tver oy vea blur hz vea mean 0->1*/
+    filter: blur(.5px);/*filter: blur(1px)-->vea tver oy blur doj opacity dl te*/
+}
+.menubar ul li:hover a{
+    opacity: 1;
+    filter: blur(0px);
+    background-color: rgb(175, 170, 170);
+    color: rgb(246, 80, 113);
+    font-size: 22px;
+}

@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.box{
+    width: 200px;
+    background-color: brown;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s;
+    transition-property: all;
+}
+.box:hover{
+    opacity: 1;
+    color: white;
+}

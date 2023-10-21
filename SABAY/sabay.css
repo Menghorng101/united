@@ -1,0 +1,1099 @@
+/*variable*/
+:root{
+    --color-dark:#333;
+    --color-light:#fff;
+    --color-light1:#999999;
+    --color-light2:#ABAAAB;
+    --color-light3:#dddddd;
+    --color-light-nav:rgba(255, 255, 255, 0.8);
+    --color-danger: #F2272F;
+    --color-pramiry: #4390F8;
+    --color-success: #38C378;
+    --color-warning: #F9A62B;
+    --color-pink:#FA5480;
+    --bg-header: #161616;
+    --bg-nav:#fa1939;
+    --bg-nav-active:#D90C16;
+    --text-nav-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    --linear-gradient-overlay: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 60%, black 100%);
+    --default-transition: all 0.3s linear;
+    --default-scale:scale(0.98);
+    --logo-size: 80px;
+    --Koulen-font-family: 'Koulen', Arial, Helvetica, sans-serif;
+    --Battambang-font-family: 'Battambang', cursive;
+    --box-shadow-small-content: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: var(--Koulen-font-family);
+}
+
+.container-fluid{
+    width: 100%;
+}
+
+/* header */
+.container-fluid .header{
+    width: 100%;
+    background-color: var(--color-dark);
+    display: flex;
+    justify-content: center;
+}
+
+.container-fluid .header .content,
+.container-fluid .nav .content,
+.container-fluid .container .content,
+.container-fluid .footer .content{
+    width: 70%;
+}
+
+.container-fluid .header .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px 10px;
+}
+
+.container-fluid .header .content .logo a img{
+    width: var(--logo-size);
+}
+/* end of header */
+
+/* nav */
+.container-fluid .nav{
+    width: 100%;/*ដាក់​១០០ភាគរយឪ្យ = ​៦០ភាគរយនៃ header */
+    background-color: var(--bg-nav);
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+}
+
+.container-fluid .nav .content ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container-fluid .nav .content ul li{
+    list-style-type: none;
+}
+
+.container-fluid .nav .content ul li a{
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--color-light-nav);
+    transition: var(--default-transition);
+}
+
+.container-fluid .nav .content ul li a:hover{
+    color: var(--color-light);
+}
+
+.container-fluid .nav .content ul li a.active{
+    color: var(--color-light);
+    background-color: var(--bg-nav-active);
+    text-shadow: var(--text-nav-shadow);
+}
+/* end of nav */
+
+/* container */
+.container-fluid .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-fluid .container .content{
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0px;
+}
+
+.container-fluid .container .content .content-left{
+    width: 75%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: repeat(2, 254px);
+}
+
+.container-fluid .container .content .content-left a{
+    position: relative;
+}
+.container-fluid .container .content .content-left a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* + overlay : ធ្វើឪ្យ background រាងងងឺត */
+.container-fluid .container .content .content-left a .overlay{
+    /*ដើម៣ប្រើ overlay នីងបានយើងត្រូវកំណត់ទៅជា​ position:​obsolute ហើយដើម៣ធ្វើវាជា​ position:​obsolute​​ ឪ្យវាឡើងមកលើ​ ហើយដើម៣​កំណត់ position:​obsolute​​ បាន​ យើងត្រូវកំណត់ position:relative លើ​ a </tag>​​​​ សិន បើមិនកំណត់ position:relative សិនទេ​ ពេលប្រើ position:​obsolute​ វាបែកចេកក្រៅពេលដែលយើងប្រើ top and left*/
+    position: absolute;
+    background: var(--linear-gradient-overlay); /*ues backgrond not use background-color:  */
+    width: 100%;
+    height: 100%;
+    opacity: 0.5; /*ងងីតតិច */
+    transition:var(--default-transition);
+    z-index: 1; /*ប្រើវាដើម្បីកំណត់ឪ្យ overlay នៅលើរឺក្រោម(លេខតូចនៅក្រោមលេខធំនៅលើ*/
+}
+
+.container-fluid .container .content .content-left a:hover .overlay{
+    opacity: 1;/*ងងីតខាំង */
+}
+
+.container-fluid .container .content .content-left a .flag{
+    position: absolute; /*ត្រូវប្រើ position: absolute ដើម៣កំណត់ទីតាំងវា*/
+    top: 10px;
+    left: 0px;
+    color: var(--color-light);
+    z-index: 2;
+    font-size: 13px;
+    padding: 6px 14px;
+}
+
+/* + ត្រង់នេះយើងចាប់​ កូន​ មួយមួយដើម៣ដាក់ពណ៏ ប្រើ ​a:nth-child() ត្រូវចាប់លើ a </tag>*/
+.container-fluid .container .content .content-left a:nth-child(1) .flag, .container-fluid .container .content .content-left a:nth-child(4) .flag{
+    background-color: var(--color-success);
+}
+
+.container-fluid .container .content .content-left a:nth-child(2) .flag{
+    background-color: var(--color-pink);
+}
+
+.container-fluid .container .content .content-left a:nth-child(3) .flag{
+    background-color: var(--color-warning);
+}
+
+.container-fluid .container .content .content-left a .flag::after{
+    content: " ";
+    position: absolute;
+    border-style: solid;
+    top: 0px;
+    right: -16px;
+    border-width: 33px 0px 0px 16px;
+    border-color: transparent transparent transparent violet; /*transparent = emty not color*/
+}
+
+.container-fluid .container .content .content-left a:nth-child(1) .flag::after, .container-fluid .container .content .content-left a:nth-child(4) .flag::after{
+    border-color: transparent transparent transparent #38C378;
+}
+
+.container-fluid .container .content .content-left a:nth-child(2) .flag::after{
+    border-color: transparent transparent transparent #FA5480;
+}
+
+.container-fluid .container .content .content-left a:nth-child(3) .flag::after{
+    border-color: transparent transparent transparent #F9A62B;
+}
+
+/* time */
+.container-fluid .container .content .content-left a .time{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    font-size: 12px;
+    font-weight: normal;
+    color: var(--color-light);
+    font-family: var(--Battambang-font-family);
+    text-shadow: var(--text-nav-shadow);
+}
+/* end of time */
+
+/* title-content */
+.container-fluid .container .content .content-left a .title-content{
+    width: 90%;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    color: var(--color-light);
+    font-family: var(--Battambang-font-family);
+    z-index: 2;
+    transition: var(--default-transition);
+}
+.container-fluid .container .content .content-left a:hover .title-content{
+    bottom: 50px;
+}
+/* end of title-content */
+
+/* title */
+.container-fluid .container .content .content-left a .title-content .title{
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: var(--text-nav-shadow);
+}
+.container-fluid .container .content .content-left a:hover .title-content .title{
+    color: var(--color-danger);
+}
+
+/* discription */
+.container-fluid .container .content .content-left a .title-content .discription{
+    font-size: 15px;
+    opacity: 0; /*ងងឺតខ្លាំង*/
+    visibility: hidden; /* លាក់ discription */
+    transition: all var(--default-transition);
+}
+
+.container-fluid .container .content .content-left a:hover .title-content .discription{
+    opacity: 0.5; /*ភ្លឺព្រីល*/
+    visibility: visible; /*បញ្ចេញឪ្យមើលឃើញ*/
+}
+/* end of discription */
+
+.container-fluid .container .content .content-right{
+    width: 25%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 249px);
+    grid-row-gap: 10px;
+}
+
+.container-fluid .container .content .content-right a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* end of container */
+
+/* video container */
+.container-fluid .container .video{
+    /*ត្រង់នីងមិនបាច់កំណត់ width​ ឪ្យវាតទព្រោះយើងបានកំណត់វាក្នុង .container-fluid .container .content ហើយដោយ width: 70%; */
+    display: flex;
+    flex-direction: column; /*មកជាជួឈរ*/
+    align-items: flex-start;
+}
+
+/* flag */
+.container-fluid .container .video .flag{
+   background-color: var(--color-danger);
+   color: var(--color-light);
+   text-decoration: none;
+   font-size: 18px;
+   padding: 10px 15px;
+   position: relative;
+}
+
+.container-fluid .container .video .flag::after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    top: 0px;
+    right: -22px;
+    border-width: 49px 0px 0px 23px;
+    border-color: transparent transparent transparent var(--color-danger);
+}
+/* end of flag */
+
+/* small content */
+.container-fluid .container .video .small-content{
+    width: 100%;
+    padding: 20px 30px;
+    box-shadow: var(--box-shadow-small-content);
+    border-top: 3px solid var(--color-danger);
+    margin-top: -9.7px;
+}
+
+.container-fluid .container .video .small-content .top-small-content{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-column-gap: 0.25%;
+}
+
+/* top small content */
+.container-fluid .container .video .small-content .top-small-content a div{
+    width: 100%;
+    height: 200px;
+    background-color: var(--color-dark);
+}
+
+.container-fluid .container .video .small-content .top-small-content a div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.1s linear;
+}
+
+.container-fluid .container .video .small-content .top-small-content a div:hover img{
+    transform: scale(0.98);
+}
+
+.container-fluid .container .video .small-content .top-small-content a{
+    text-decoration: none;
+    display: block;
+}
+.container-fluid .container .video .small-content .top-small-content a p{
+    color: var(--color-dark);
+    font-family: var(--Battambang-font-family);
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 15px 10px 0px;
+}
+
+/* end of top small content */
+
+/* bottom small content */
+.container-fluid .container .content .small-content .bottom-small-content{
+   width: 100%;
+   display: flex;
+   align-items: flex-start;
+   gap: 2%;
+}
+
+/* btm small content left */
+.container-fluid .container .content .small-content .bottom-small-content .btm-small-content-left{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 22%); /*យក​២២%​ព្រោះbox4*/
+    grid-column-gap: 4%;/*យក​៤%​ព្រោះសល់១២%ពីការចែកទំហំbox4*/
+    grid-row-gap: 4%;
+}
+.container-fluid .container .content .small-content .bottom-small-content .btm-small-content-left a div{
+    width: 100%;
+    height: 120px;
+    background-color: var(--bg-header);
+}
+
+.container-fluid .container .content .small-content .bottom-small-content .btm-small-content-left a div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.1s linear;
+}
+
+.container-fluid .container .content .small-content .bottom-small-content .btm-small-content-left a div:hover img{
+    transform: var(--default-scale);
+}
+
+.container-fluid .container .content .small-content .bottom-small-content .btm-small-content-left a{
+    text-decoration: none;
+}
+
+.container-fluid .container .content .small-content .bottom-small-content .btm-small-content-left a p{
+    font-size: 13px;
+    font-family: var(--Battambang-font-family);
+    color: var(--color-dark);
+}
+/* end of btm small content left */
+
+/* btm small content right */
+.container-fluid .container .content .small-content .bottom-small-content .btm-small-contnet-right{
+    width: 30%;
+}
+
+.container-fluid .container .content .small-content .bottom-small-content .btm-small-contnet-right a img{
+    width: 100%;
+    object-fit: cover;
+}
+/* end of btm small content right */
+
+/* end of bottom small content */
+
+/* end of small content */
+
+/* end of video container */
+
+/* entertainment-container */
+.container-fluid .container .news-entertainment{
+    display: flex;
+    flex-direction: column; /*ឈួរឈរ */
+    align-items: flex-start;
+}
+
+/* flag */
+.container-fluid .container .news-entertainment .flag{
+    text-decoration: none;
+    font-size: 18px;
+    background-color: var(--color-pink);
+    color: var(--color-light);
+    padding: 10px 15px;
+    position: relative;
+}
+
+.container-fluid .container .news-entertainment .flag::after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    top: 0px;
+    right: -22px;
+    border-width: 49px 0px 0px 23px;
+    border-color: transparent transparent transparent var(--color-pink);
+}
+/* end of flag */
+
+/* small news content */
+.container-fluid .container .news-entertainment .small-news-content{
+    width: 100%;
+    padding: 20px 30px;
+    box-shadow: var(--box-shadow-small-content);
+    border-top: 3px solid var(--color-pink);
+    margin-top: -9.7px;
+    display: flex;
+    align-items: flex-start;
+    gap: 2%;
+    position: relative;
+}
+
+/* small-news-content-left */
+.container-fluid .container .news-entertainment .small-news-content .small-news-content-left{
+    width: 34%;
+}
+
+.container-fluid .container .news-entertainment .small-news-content .small-news-content-left a div{
+    width: 100%;
+    height: 220px;
+    background-color: var(--bg-header);
+}
+
+.container-fluid .container .news-entertainment .small-news-content .small-news-content-left a div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.1s linear;
+}
+.container-fluid .container .news-entertainment .small-news-content .small-news-content-left a div:hover img{
+    transform: var(--default-scale);
+}
+
+.container-fluid .container .news-entertainment .small-news-content .small-news-content-left a{
+    text-decoration: none;
+}
+
+.container-fluid .container .news-entertainment .small-news-content .small-news-content-left a p{
+    font-size: 22px;
+    font-family: var(--Battambang-font-family);
+    font-weight: bold;
+    color: var(--color-light);
+    background-color: var(--color-pink);
+    padding: 15px 20px;
+}
+
+/* end of small-news-content-left */
+
+/* small-news-content-right */
+.container-fluid .container .news-entertainment .small-news-content .small-news-content-right{
+    width: 66%;
+    display: grid;
+    grid-template-columns: repeat(4, 24%) ;
+    justify-content: space-between;
+    grid-row-gap: 3%;
+}
+
+.container-fluid .container .news-entertainment .small-news-content .small-news-content-right a div{
+    width: 100%;
+    height: 120px;
+    background-color: var(--bg-header);
+}
+
+.container-fluid .container .news-entertainment .small-news-content .small-news-content-right a div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.1s linear;
+}
+
+.container-fluid .container .news-entertainment .small-news-content .small-news-content-right a div:hover img{
+    transform: var(--default-scale);
+}
+
+.container-fluid .container .news-entertainment .small-news-content .small-news-content-right a{
+    text-decoration: none;
+}
+
+.container-fluid .container .news-entertainment .small-news-content .small-news-content-right a p{
+    font-size: 13px;
+    font-family: var(--Battambang-font-family);
+    color: var(--color-dark);
+    margin: 5px 0 0;
+}
+/* end of small-news-content-right */
+
+/* arrow */
+.container-fluid .container .news-entertainment .small-news-content .btn-arrow-next{
+    position: absolute;
+    top: 50%;
+    transform: translate(-5px, -50%);
+    right: 5px;
+    color: var(--color-pink);
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* end of arrow */
+
+/* end of small news content */
+
+/* end of entertainment-container */
+
+/* technology container */
+.container-fluid .container .news-technology{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* flag */
+.container-fluid .container .news-technology .flag{
+    text-decoration: none;
+    color: var(--color-light);
+    background-color:var(--color-success);
+    font-size: 18px;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.container-fluid .container .news-technology .flag::after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    top: 0px;
+    right: -22px;
+    border-width: 49px 0px 0px 23px ;
+    border-color: transparent transparent transparent var(--color-success);
+}
+/* end of flag */
+
+/* small-newstecnology-content */
+.container-fluid .container .news-technology .small-newstecnology-content{
+    width: 100%;
+    padding: 20px 30px;
+    box-shadow: var(--box-shadow-small-content);
+    border-top: 3px solid var(--color-success);
+    margin-top: -9.9px;
+    display: flex;
+    align-items: flex-start;
+    gap: 2%;
+    position: relative;
+}
+/* end of small-newstechnology-content */
+
+/* small-news-left */
+.container-fluid .container .news-technology .small-newstecnology-content .small-news-left{
+    width: 34%;
+}
+
+.container-fluid .container .news-technology .small-newstecnology-content .small-news-left a div{
+    width: 100%;
+    height: 220px;
+    background-color: var(--bg-header);
+}
+
+.container-fluid .container .news-technology .small-newstecnology-content .small-news-left a div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.1s linear;
+}
+
+.container-fluid .container .news-technology .small-newstecnology-content .small-news-left a div:hover img{
+    transform: var(--default-scale);
+}
+
+.container-fluid .container .news-technology .small-newstecnology-content .small-news-left a{
+    text-decoration: none;
+}
+
+.container-fluid .container .news-technology .small-newstecnology-content .small-news-left a p{
+   background-color: var(--color-success);
+   color: var(--color-light);
+   font-size: 22px;
+   font-weight: bold;
+   font-family: var(--Battambang-font-family);
+   padding: 15px 20px;
+}
+/* end of small-news-left */
+
+/* small-news-right */
+.container-fluid .container .news-technology .small-newstecnology-content .small-news-right{
+    width: 66%;
+    display: grid;
+    grid-template-columns: repeat(4, 24%) ;
+    justify-content: space-between;
+    grid-row-gap: 3%;
+}
+
+.container-fluid .container .news-technology .small-newstecnology-content .small-news-right a div{
+    width: 100%;
+    height: 120px;
+    background-color: var(--bg-header);
+}
+
+.container-fluid .container .news-technology .small-newstecnology-content .small-news-right a div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.1s linear;
+}
+
+.container-fluid .container .news-technology .small-newstecnology-content .small-news-right a div:hover img{
+    transform: var(--default-scale);
+}
+
+.container-fluid .container .news-technology .small-newstecnology-content .small-news-right a{
+    text-decoration: none;
+}
+
+.container-fluid .container .news-technology .small-newstecnology-content .small-news-right a p{
+    font-size: 13px;
+    font-family: var(--Battambang-font-family);
+    color: var(--color-dark);
+    padding: 5px 0px 0px;
+}
+/* end of small-news-right  */
+
+/* arrow */
+.container-fluid .container .news-technology .small-newstecnology-content .btn-arrow-next{
+    position: absolute;
+    top: 50%;
+    transform: translate(-5px, -50%);
+    right: 5px;
+    color: var(--color-success);
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* end of arrow */
+
+/* end of technology container */
+
+/* life and social container*/
+.container-fluid .container .news-life-and-social{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* flag */
+.container-fluid .container .news-life-and-social .flag{
+    text-decoration: none;
+    color: var(--color-light);
+    background-color: var(--color-warning);
+    font-size: 18px;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.container-fluid .container .news-life-and-social .flag::after{
+    content: " ";
+    position: absolute;
+    border-style: solid;
+    right:-22px;
+    top: 0;
+    border-width: 49px 0px 0px 23px;
+    border-color: transparent transparent transparent var(--color-warning);
+}
+/* end of flag */
+
+/* small-news-lifeandsocial-content */
+.container-fluid .container .news-life-and-social .small-news-lifeandsocial-content{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 2%;
+    padding: 20px 30px;
+    box-shadow: var(--box-shadow-small-content);
+    border-top: 3px solid var(--color-warning);
+    margin-top: -10px;
+    position: relative;
+}
+/* end of small-news-lifeandsocial-content */
+
+/* news-lifeandsocial-left */
+.container-fluid .container .news-life-and-social .small-news-lifeandsocial-content .news-lifeandsocial-left{
+    width: 34%;
+}
+
+.container-fluid .container .news-life-and-social .small-news-lifeandsocial-content .news-lifeandsocial-left a div{
+    width: 100%;
+    height: 220px;
+    background-color: var(--bg-header);
+}
+
+.container-fluid .container .news-life-and-social .small-news-lifeandsocial-content .news-lifeandsocial-left a div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.1s linear;
+}
+
+.container-fluid .container .news-life-and-social .small-news-lifeandsocial-content .news-lifeandsocial-left a div:hover img{
+    transform: var(--default-scale);
+}
+
+.container-fluid .container .news-life-and-social .small-news-lifeandsocial-content .news-lifeandsocial-left a{
+    text-decoration: none;
+}
+
+.container-fluid .container .news-life-and-social .small-news-lifeandsocial-content .news-lifeandsocial-left a p{
+    font-size: 22px;
+    font-family: var(--Battambang-font-family);
+    font-weight: bold;
+    color: var(--color-light);
+    background-color: var(--color-warning);
+    padding: 15px 20px;
+}
+/* end of news-lifeandsocial-left */
+
+/* news-lifeandsocial-right */
+.container-fluid .container .news-life-and-social .small-news-lifeandsocial-content .news-lifeandsocial-right{
+    width: 66%;
+    display: grid;
+    grid-template-columns: repeat(4,24%);
+    justify-content: space-between;
+    grid-row-gap: 3%;
+}
+
+.container-fluid .container .news-life-and-social .small-news-lifeandsocial-content .news-lifeandsocial-right a div{
+    width: 100%;
+    height: 120px;
+    background-color: var(--bg-header);
+}
+
+.container-fluid .container .news-life-and-social .small-news-lifeandsocial-content .news-lifeandsocial-right a div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.1s linear;
+}
+
+.container-fluid .container .news-life-and-social .small-news-lifeandsocial-content .news-lifeandsocial-right a div:hover img{
+    transform: var(--default-scale);
+}
+
+.container-fluid .container .news-life-and-social .small-news-lifeandsocial-content .news-lifeandsocial-right a{
+    text-decoration: none;
+}
+
+.container-fluid .container .news-life-and-social .small-news-lifeandsocial-content .news-lifeandsocial-right a p{
+    font-family: var(--Battambang-font-family);
+    font-size: 13px;
+    color: var(--color-dark);
+    padding: 5px 0px 0px;
+}
+/* end of news-lifeandsocial-right */
+
+/* arrow */
+.container-fluid .container .news-life-and-social .small-news-lifeandsocial-content .btn-arrow-next{
+    position: absolute;
+    top: 50%;
+    transform: translate(-5px, -50%);
+    right: 5px;
+    color: var(--color-warning);
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* end of arrow */
+
+/* end of life and social container */
+
+/* sport container */
+.container-fluid .container .news-sport{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* flag */
+.container-fluid .container .news-sport .flag{
+    text-decoration: none;
+    font-size: 18px;
+    background-color: var(--color-pramiry);
+    color: var(--color-light);
+    padding: 10px 15px;
+    position: relative;
+}
+
+.container-fluid .container .news-sport .flag::after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 49px 0px 0px 23px;
+    right: -22px;
+    top: 0px;
+    border-color: transparent transparent transparent var(--color-pramiry);
+
+}
+/* end of flag */
+
+/* small-news-sport-content */
+.container-fluid .container .news-sport .small-news-sport-content{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 2%;
+    border-top: 3px solid var(--color-pramiry);
+    margin-top: -10px;
+    box-shadow: var(--box-shadow-small-content);
+    padding: 20px 30px;
+    position: relative;
+}
+/* end of small-news-sport-content */
+
+/* news-sport-left */
+.container-fluid .container .news-sport .small-news-sport-content .news-sport-left{
+    width: 34%;
+}
+
+.container-fluid .container .news-sport .small-news-sport-content .news-sport-left a div{
+    width: 100%;
+    height: 220px;
+    background-color: var(--bg-header);
+}
+
+.container-fluid .container .news-sport .small-news-sport-content .news-sport-left a div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.1s linear;
+}
+
+.container-fluid .container .news-sport .small-news-sport-content .news-sport-left a div:hover img{
+    transform: var(--default-scale);
+}
+
+.container-fluid .container .news-sport .small-news-sport-content .news-sport-left a{
+    text-decoration: none;
+}
+
+.container-fluid .container .news-sport .small-news-sport-content .news-sport-left a p{
+    font-size: 22px;
+    font-family: var(--Battambang-font-family);
+    font-weight: bold;
+    background-color: var(--color-pramiry);
+    color: var(--color-light);
+    padding: 15px 20px;
+}
+/* end of news-sport-left */
+
+/* news-sport-right */
+.container-fluid .container .news-sport .small-news-sport-content .news-sport-right{
+    width: 66%;
+    display: grid;
+    grid-template-columns: repeat(4,24%);
+    justify-content: space-between;
+    grid-row-gap: 3%;
+}
+
+.container-fluid .container .news-sport .small-news-sport-content .news-sport-right a div{
+    width: 100%;
+    height: 120px;
+    background-color: var(--bg-header);
+}
+
+.container-fluid .container .news-sport .small-news-sport-content .news-sport-right a div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.1s linear;
+}
+
+.container-fluid .container .news-sport .small-news-sport-content .news-sport-right a div:hover img{
+    transform: var(--default-scale);
+}
+
+.container-fluid .container .news-sport .small-news-sport-content .news-sport-right a{
+    text-decoration: none;
+}
+
+.container-fluid .container .news-sport .small-news-sport-content .news-sport-right a p{
+    font-size: 13px;
+    color: var(--color-dark);
+    font-family: var(--Battambang-font-family);
+    padding: 5px 0px 0px;
+}
+/* end of news-sport-right */
+
+/* arrow */
+.container-fluid .container .news-sport .small-news-sport-content .btn-arrow-next{
+    position: absolute;
+    top: 50%;
+    transform: translate(-5px, -50%);
+    right: 5px;
+    color: var(--color-pramiry);
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* end of arrow */
+
+/* end of sport container */
+
+/* footer */
+.container-fluid .footer{
+    width: 100%;
+    background-color: var(--bg-header);
+    margin-top: 80px;
+    padding: 40px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-fluid .footer .content{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* footer-left */
+.container-fluid .footer .content .footer-left{
+    width: 25%;
+    font-size: 14px;
+    font-family: var(--Battambang-font-family);
+    color: var(--color-light);
+}
+
+.container-fluid .footer .content .footer-left .logo{
+    margin-bottom: 10px;
+}
+.container-fluid .footer .content .footer-left .footer-discription{
+    color: var(--color-light1);
+    margin-bottom: 11px;
+}
+
+.container-fluid .footer .content .footer-left .footer-link{
+    color: var(--color-light2);
+    text-decoration: none;
+    margin-bottom: 11px;
+}
+
+.container-fluid .footer .content .footer-left .footer-link:hover{
+    color: var(--color-light);
+}
+
+.container-fluid .footer .content .footer-left .footer-tittle{
+    color: var(--color-light3);
+    font-weight: bold;
+    margin-top: 11px;
+}
+/* end of footer-left */
+
+/* footer-center */
+.container-fluid .footer .content .footer-center{
+    width: 50%;
+    color: var(--color-light2);
+    padding-left: 60px;
+}
+
+.container-fluid .footer .content .footer-center .footer-tittle{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.container-fluid .footer .content .footer-center .footer-content{
+    font-family: var(--Battambang-font-family);
+    font-size: 14px;
+    margin-bottom: 11px;
+}
+
+.container-fluid .footer .content .footer-center .footer-content span{
+    font-weight: bold;
+}
+.container-fluid .footer .content .footer-center .footer-content a{
+    text-decoration: none;
+    color: var(--color-light2);
+}
+
+.container-fluid .footer .content .footer-center .footer-content a:hover{
+    color: var(--color-light);
+}
+
+.container-fluid .footer .content .footer-center .footer-discription{
+    font-family: var(--Battambang-font-family);
+    font-size: 14px;
+    margin-bottom: 11px;
+}
+
+.container-fluid .footer .content .footer-center .brand{
+    width: 100%;
+    display: flex; /*មកជាជួរដេក*/
+    align-items: center;
+}
+
+.container-fluid .footer .content .footer-center .brand a{
+    width: 40px;
+    overflow: hidden;
+    margin-right: 5px;
+}
+
+.container-fluid .footer .content .footer-center .brand a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    
+}
+
+/* end of footer-center */
+
+.container-fluid .footer .content .footer-right{
+    width: 20%;
+}
+
+.container-fluid .footer .content .footer-right .footer-title{
+    font-size: 20px;
+    color: var(--color-light2);
+    margin-bottom: 20px;
+}
+
+.container-fluid .footer .content .footer-right .icon{
+    display: flex;
+    align-items: center;
+}
+.container-fluid .footer .content .footer-right .icon a{
+    color: var(--color-light2);
+    margin-right: 8px;
+    font-size: 25px;
+}
+
+.container-fluid .footer .content .footer-right .icon a:hover{
+    color: var(--color-light);
+}
+
+.container-fluid .footer .content .footer-right .discription{
+    font-size: 14px;
+    font-family: var(--Battambang-font-family);
+    color: var(--color-light2);
+    margin-top: 15px;
+}
+
+.container-fluid .footer .content .footer-right a{
+    text-decoration: none;
+    color: var(--color-light2);
+    font-family: var(--Battambang-font-family);
+    font-size: 14px;
+}
+
+.container-fluid .footer .content .footer-right .number{
+    font-size: 14px;
+    font-family: var(--Battambang-font-family);
+    color: var(--color-light2);
+}
+
+
+
+
+/* end of footer */

@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.grid-templet{
+    display: grid;
+    /* grid-template-columns: 100px 100px 100px 100px; *//*ot penh te*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;/*kur penh content*/
+    background-color: cornflowerblue;
+    grid-gap: 10px; /*tver box mean kom leat pi knea*/
+}
+.grid-templet div{
+    background-color: brown;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}

@@ -1,0 +1,26 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.img-box{
+    display: flex;/*mk chea jur dek all*/
+    flex-direction: row;/*mk chea jur dek all*/
+    flex-wrap: wrap;/*pel scroll rub tlak mk tam doj responsive*/
+    justify-content: center;
+}
+.img-box div{
+    height: 300px;
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.img-box div img{
+    height: 100%;
+    transition: all .3s linear;
+    opacity: 0.5;
+}
+.img-box div img:hover{
+    transform: scale(1.1) rotate(5deg);
+    opacity: 1;
+}

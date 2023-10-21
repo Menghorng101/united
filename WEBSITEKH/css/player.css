@@ -1,0 +1,229 @@
+.player-page{
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    padding: 30px 100px;
+    background-color: #EAECEE;
+}
+.player-page .content-page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.player-page .content-page h2{
+    color: #5D6D7E;
+    text-decoration: underline;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.player-page .content-page img{
+    width: 80%;
+}
+.player-page .content-page .discription{
+    margin-top: 20px;
+    font-size: 14px;
+    color: #5D6D7E;
+    text-align: justify;
+    text-indent: 60px;
+    background-color: #FBFCFC;
+    padding: 5px;
+}
+.title-player{
+    text-align: center;
+    font-size: 35px;
+    color: #5D6D7E;
+    text-transform: capitalize;
+    max-width: 90%;
+    background-color: #EAECEE;
+    margin: auto;
+    padding-top: 10px;
+}
+.player-page .small-title{
+    font-size: 35px;
+    text-transform: capitalize;
+    font-size: 35px;
+    color: #5D6D7E;
+    align-self: flex-start;
+    margin-top: 40px;
+    text-decoration: underline;
+}
+/* top player */
+.top-player{
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+.top-player .top-player-content{
+    width: 100%;
+    height: 665px;
+    background-color: #B2BABB;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 2px 0px 5px #283747;
+    transition: all 0.3s linear;
+}
+.top-player .top-player-content:hover{
+    box-shadow: 0px 2px 5px #283747;
+}
+.top-player .top-player-content img{
+    width: 100%;
+    border-radius: 6px;
+}
+.top-player .top-player-content h2{
+    font-size: 24px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    color: #5D6D7E;
+}
+.top-player .top-player-content .rate{
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+}
+.top-player .top-player-content .rate .rate-number{
+    font-weight: bold;
+    color:#5D6D7E;
+}
+.top-player .top-player-content .rate .rate-views{
+    color:#5D6D7E;
+}
+.top-player .top-player-content .rate div{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.top-player .top-player-content .discription{
+    color:#5D6D7E;
+    font-size: 14px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+/* end top player */
+/* comment */
+.comment{
+    width: 100%;
+    max-width: 90%;
+    background-color: #A6ACAF;
+    margin: auto;
+    padding: 30px 100px;
+}
+.comment h2{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.comment form{
+    display: flex;
+    flex-direction: column;
+}
+.comment form input{
+    height: 40px;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.comment form textarea{
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.comment h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.comment .comment-status{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.comment .comment-status img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border:2px solid dodgerblue;
+}
+.comment .comment-status .active-comment{
+    display: flex;
+    flex-direction: column;
+}
+.comment .comment-status .active-comment .comment-word{
+    display: flex;
+    align-items:center;
+}
+.comment .comment-status .active-comment .comment-word .username{
+    text-transform: capitalize;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.comment .comment-status .active-comment .comment-article{
+    text-transform: capitalize;
+    font-size: 14px;
+}
+.comment .comment-status .active-comment .activity{
+    display: flex;
+    margin-left: 5px;
+}
+.comment .comment-status .active-comment .activity a{
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-transform: capitalize;
+    color: dodgerblue;
+}
+.comment .comment-status .active-comment .activity .time{
+    margin-left: 5px;
+}
+/* end comment */
+/* responsive */
+@media (max-width: 1280px){
+    .top-player .top-player-content{
+        height: 620px;
+    }
+}
+@media (max-width: 992px){
+    .player-page .content-page img{
+        width: 90%;
+    }
+    .player-page .content-page .discription{
+        text-indent: 40px;
+    }
+    .top-player{
+        grid-template-columns: 1fr;
+    }
+    .top-player .top-player-content{
+        height: 630px;
+    }
+}
+@media (max-width: 768px){
+    .player-page{
+        max-width: 100%;
+    }
+    .title-player{
+        max-width: 100%;
+    }
+    .top-player .top-player-content{
+        height: 620px;
+    }
+    .comment{
+        max-width: 100%;
+    }
+}
+@media (max-width: 600px){
+    .player-page{
+        padding: 30px 50px;
+    }
+    .player-page .content-page .discription{
+        text-indent: 20px;
+    }
+    .top-player .top-player-content{
+        height: 630px;
+    }
+    .comment{
+        padding: 30px 50px;
+    }
+}

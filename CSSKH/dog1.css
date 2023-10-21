@@ -1,0 +1,17 @@
+body{
+    font-family: sans-serif;
+    background-color: cadetblue;
+    color: brown;
+}
+h1{
+    color: aliceblue;
+}
+ul{
+    background-color: beige;
+}
+p{
+    font-size: 13px;
+}
+li{
+    font-size: 20px;
+}

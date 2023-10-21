@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: azure;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    overflow: hidden; /* overfloat hidden = a'vai dl nv krov box kur vea kat jol all */
+    border-radius: 50%; /*border radius = tver oy box move*/
+    animation: box1 7s linear infinite;
+}
+.container img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes box1
+{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+}

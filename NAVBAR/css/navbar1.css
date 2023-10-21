@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Tilt Neon', cursive;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4)
+    ,rgba(0, 0, 0, 0.5)),url(/IMAGE/2.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    width: 100%;
+    height: 80px;
+}
+.logo{
+    color: red;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 80px;
+    padding: 100px;
+}
+nav ul{
+    list-style: none;
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block; /*oy vea mk chea jor dek*/
+    line-height: 80px;
+    margin: 0px  10px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none; /*dl ruler janh*/
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+a.touch,a:hover{
+    border-bottom: 3px solid red;
+    transition: .5s;
+}
+.selectbtn{
+    color: white;
+    font-size: 45px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#select{
+    display: none;
+}
+@media(max-width:950px){
+    .logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media(max-width:850px){
+    .selectbtn{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        min-height: 100vh;
+        backdrop-filter: blur(10px);
+        top: 80px;
+        left: -100%;
+        transition: all .5s;
+        text-align: center;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0px;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background-color: white;
+        color: black;
+    }
+    #select:checked~ul{
+        left: 0px;
+    }
+}

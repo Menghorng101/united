@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.menubar{
+    width: 100%;
+    background-color: darkorchid;
+}
+.menubar ul{
+    list-style-type: none;
+    text-align: center;
+}
+.menubar ul li{
+    display: inline-block;
+}
+ .menubar ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    transition: all .5s linear;
+}
+.menubar ul li:hover a{
+    color: black;
+    background-color: rgb(194, 117, 233);
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+

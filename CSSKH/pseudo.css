@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+p:active{ /*:active = teal tea juk ler*/
+    background-color: darkseagreen;
+    color: white;
+}
+h5:hover{
+    background-color: coral;
+    color: white;
+}
+a:link{ /*link = b'rer pel min tean jol mer kur color red ber mer hz kur vea dom n'rer ka te*/
+    background-color: red;
+    color: white;
+}
+a:visited{ /*visited = b'rer pel mer hz oy vea janh color a'vai*/
+    background-color: aquamarine;
+    color: black;
+}
+h1:first-child{ /*jab yk kon 2, 3, 4 b'rer nth-child(1, 2, 3, 4)*/
+    background-color: black;
+    color: white;
+}
+/* pel mean h1 ng p yg b'rer first-of type or last-of type */
+/* pel mean h1 ng p yg jg hov kon 2, 3, 4 yg b'rer nth-first-of-type or nth-last-of type */
+#text:focus{
+    background-color: darkcyan;
+    color: white;   
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+}
+.box::before{
+    content: "before"; /*befor = dak teat pi muk teat baj'jobon*/
+    background-color: brown;
+}
+.box::after{
+    content: "after";  /*after = dak teat pi kroy teat baj'jobon*/
+    background-color: goldenrod;
+}
+.box::selection{ /*selection = pel yg select ler a'sor oy vea p'do color*/
+    background-color: cornsilk;
+}

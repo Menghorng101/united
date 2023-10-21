@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0px;
+}
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse; /*kat ruler 1 janh*/
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    padding: 10px 10px;
+}
+th{
+    background-color: blueviolet;
+    color: white;
+}
+tr:nth-child(odd){
+    background-color: gray;
+}
+/*nth-child = class child (even = number ku, odd = number ces)*/

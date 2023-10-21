@@ -1,0 +1,60 @@
+/* body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: silver;
+    font-family: sans-serif;
+}
+.container{
+    width: 900px;
+    background-color: white;
+    padding: 20px 20px 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.container div{
+    width: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: small;
+    color: white;
+}
+*/ 
+/* +Ues display:flex; */
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: lightgray;
+    font-family: sans-serif;
+}
+.container{
+    width: 700px;
+    background-color: white;
+    padding: 20px;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(4,1fr);/*grid-template 2 ng doj knea use 1 na kor ban*/
+    grid-gap: 10px;/*tver oy vea mean kom leat janh pi knea doj magrin*/
+}
+.container div{
+    /* width: 100px; *//*pel usedisplay: grid; grid-template-columns: 1fr 1fr 1fr 1fr; yg ach lub wiht in class parent ban*/
+    padding: 10px;
+    text-align: center;
+    /* margin-bottom: 10px; */ /*grid-gap: 10px; min baj use margin ban*/
+    font-weight: bold;
+    text-transform: capitalize;
+    color: white;
+}

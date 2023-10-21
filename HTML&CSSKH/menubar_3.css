@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.menu{
+    background-color: indianred;
+    width: 100%;
+}
+.menu ul{
+    list-style-type: none;
+    text-align: center;
+}
+.menu ul li{
+    display: inline-block;
+}
+.menu ul li a{
+    text-decoration: none;
+    padding: 30px;
+    display: block;
+    color: white;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bolder;
+    transition: all .3s linear;
+}
+.menu ul li:hover a{
+    color: dimgray ;
+    font-size: 17px;
+    background-color: rgb(222, 119, 119);
+}

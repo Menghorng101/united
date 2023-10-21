@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #34495E;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.card .image img{
+    width: 100%;
+    margin-bottom: -4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    transition: all .7s linear;
+}
+.card .content{
+    width: 100%;
+    background-color: #CACFD2;
+    text-align: center;
+    position: absolute;
+    padding: 25px 15px;
+    z-index: 5;
+    top: -80px;
+    border: 1px solid #ECF0F1;
+    box-shadow: 2px 5px 20px #ECF0F1;
+    transition: all .7s linear;
+}
+.card:hover .image img{
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+.card:hover .content{
+    top: -15px;
+}
+.card .content .title{
+    margin: 0;
+    padding: 0;
+}
+.card .content .eng-title{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.card .content .kh-title{
+    font-family: 'Preahvihear', sans-serif;
+    font-size: 18px;
+}
+.card .content .paragraph{
+    font-family: 'Preahvihear', sans-serif;
+    font-size: 12px;
+}
+.card .content .paragraph span{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}

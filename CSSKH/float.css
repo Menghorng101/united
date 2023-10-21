@@ -1,0 +1,17 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.box-1{
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    float: left;
+}
+.box-2{
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+    float: right;
+}

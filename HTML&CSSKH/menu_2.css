@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+.container{
+    width: 600px;
+    background-color: black
+}
+.container ul{
+   display: flex;
+   margin: 0;
+   padding: 0px;
+   list-style-type: none;
+}
+.container ul li a{
+    padding: 20px 30px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: .7s;
+}
+.container ul li a:hover{
+    background-color: green;
+}
+.container .active{
+    background-color: green;
+}

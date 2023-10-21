@@ -1,0 +1,48 @@
+/* title about */
+.title-about{
+    text-align: center;
+    font-size: 35px;
+    color: #5D6D7E;
+    text-transform: capitalize;
+    width: 100%;
+    max-width: 90%;
+    background-color: #EAECEE;
+    margin: auto;
+    padding-top: 10px;
+}
+/* end title about */
+/* detail */
+.detail{
+    width: 100%;
+    max-width: 90%;
+    background-color: #EAECEE;
+    margin: auto;
+    padding: 30px 100px;
+}
+.detail .discription{
+    text-indent: 60px;
+    text-align: justify;
+    font-size: 18px;
+    background-color: white;
+    color: #5D6D7E;
+    padding: 10px;
+}
+/* end detail */
+@media (max-width: 992px){
+    .detail{
+        padding: 30px 60px;
+    }
+}
+@media (max-width: 768px){
+    .detail{
+        padding: 30px 30px;
+    }
+}
+@media (max-width: 600px){
+    .title-about{
+        max-width: 100%;
+    }
+    .detail{
+        max-width: 100%;
+    }
+}

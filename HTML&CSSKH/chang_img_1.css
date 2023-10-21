@@ -1,0 +1,20 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: gray;
+}
+.container{
+    background-image: url(../IMAGE/2.jpeg);
+    height: 600px;
+    width: 500px;
+    background-size: contain; /*background-size: contain = oy rub full box*/
+    background-repeat: no-repeat; /*background-repeat: no-repeat = b'rer vea der 3 cut rub pel del rub rub lan janh tv page 1 tt */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-in-out;
+}
+.container:hover{
+    background-image: url(../IMAGE/1.jpg);
+}

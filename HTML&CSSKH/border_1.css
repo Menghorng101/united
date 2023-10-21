@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: gray;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.container{
+    background-color: white;
+    width: 600px;
+    padding: 0px 15px;
+}
+.container .p-1{
+    border: 1px solid black;
+    padding: 5px;
+}
+.container .p-2{
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+.container .p-3{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 8px;
+}
+.container .p-4{
+    border-left: 3px solid red;
+    padding: 5px;
+    background-color: #F5B7B1;
+   
+}

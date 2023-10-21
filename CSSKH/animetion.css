@@ -1,0 +1,45 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.box-1{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    text-align: center;
+    color: white;
+    line-height: 200px; /* line-height = tver oy write nv jom center box*/
+    animation-name: anime; /*name @keyframes*/
+    animation-duration: 2s; /*speed*/
+    animation-iteration-count: infinite; /*jo'lna ot chub der rhot*/
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    /* animetion: anime 3s infinite linear alternate repeat;
+    ( write all jol knea)*/
+}
+@keyframes anime{
+    from{ /*use form and to = ban tea 2 dom lai te, but use (%) man dom lai kor ban*/
+        background-color: brown;
+    }
+    to{
+        background-color: green;
+    }
+}
+/* @keyframes anime{ 
+    0%{
+        background-color: brown;
+    }
+    30%{
+        background-color: aqua;
+    }
+    50%{
+        background-color: yellow;
+    }
+    70%{
+        background-color: burlywood;
+    }
+    100%{
+        background-color: blue;
+    }
+} */

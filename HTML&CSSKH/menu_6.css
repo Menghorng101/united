@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    height: 200vh;
+}
+.container{
+    width: 100%;
+    height: 100Vh;
+    background-image: url(../IMAGE/selling.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 300px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 10;
+}
+.container .header .logo a{
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+    display: block;
+}
+.container .header .logo a span{
+    color: orange;
+}
+.container .header .navbar ul{
+    list-style-type: none;
+    display: flex;
+}
+.container .header .navbar ul li a{
+    display: block;
+    padding: 5px 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: .5s;
+}
+.container .header .navbar ul li a:hover{
+    color: orange;
+}
+.container .header .navbar ul li a.active{
+    color: orange;
+}
+.container .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.container .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 10;
+}
+.container .content h1{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: -8px;
+}
+.container .content p{
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.container .content a{
+    text-decoration: none;
+}
+.container .content .p-1{
+    border: 2px solid white;
+    padding: 5px 20px;
+    background-color: black;
+    color: white;
+}
+.container .content .p-2{
+    border: 2px solid white;
+    padding: 5px 45px;
+    background-color: white;
+    color: black;
+}

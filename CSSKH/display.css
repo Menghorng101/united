@@ -1,0 +1,64 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.box-1{
+    display: none; /*display none = not see all*/
+}
+.box-2{
+    display: block; /*display block = kur vea ot lerk box lerg ler te*/
+    background-color: burlywood;
+    color: black;
+    padding: 10px 50px;
+    width: 150px;
+    height: 150px;
+}
+.box-3{
+    display: block;
+    background-color: blue;
+    color: black;
+    padding: 10px 50px;
+    width: 150px;
+    height: 150px;
+}
+.box-4{
+    display: block;
+    background-color: brown;
+    color: black;
+    padding: 10px 50px;
+    width: 150px;
+    height: 150px;
+}
+.box-5{
+    display: inline-block; /*display inline-block = vea ach kom not width ng height ban*/
+    background-color: cyan;
+    color: black;
+    padding: 10px 50px;
+    width: 150px;
+    height: 150px;
+}
+.box-6{
+    display:inline-block;
+    background-color: darkmagenta;
+    color: black;
+    padding: 10px 50px;
+    width: 150px;
+    height: 150px;
+}
+.box-7{
+    display: inline; /*display inline = vea min ach kom not width ng height te*/
+    background-color: darkgray;
+    color: black;
+    padding: 10px 50px;
+    width: 150px;
+    height: 150px;
+}
+.box-8{
+    display:inline;
+    background-color:   violet;
+    color: black;
+    padding: 10px 50px;
+    width: 150px;
+    height: 150px;
+}

@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: gray;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+.container{
+    background-color: white;
+}
+.container table, 
+.container th, .container td{
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    padding: 10px;
+}
+.container table thead{
+    background-color: #979A9A;
+    color: green;
+}
+.container table tbody tr:nth-child(even){
+    background-color: lightgrey;
+} 
+.container table tbody tr{
+    transition: .9s;
+}
+.container table tbody tr:hover{
+    background-color: pink;
+}

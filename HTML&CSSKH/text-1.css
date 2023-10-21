@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: silver;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.container{
+    width: 600px;
+    background-color: white;
+    border: 1px solid #333;
+    padding: 10px;
+}
+.container .header h1{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: greenyellow;
+    font-weight: lighter;
+}
+.container .paragraph{
+    text-align: justify;
+    text-indent: 30px;/*jo ruller*/
+    word-spacing: 10px;
+}
+.container .paragraph span{
+    color: red;
+}

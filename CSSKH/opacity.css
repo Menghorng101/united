@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.normal img{
+    width: 200px;
+}
+.opacity img {
+    width: 200px;
+    opacity: 0.5;
+}
+.normal img:hover{
+    opacity: 0.5;
+}
+.opacity img:hover{
+    opacity: 1;
+}

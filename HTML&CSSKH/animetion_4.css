@@ -1,0 +1,57 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: crimson;
+}
+.retangle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    border: 5px solid rgb(239, 125, 125);
+    animation: anime 7s linear infinite;
+}
+p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    margin-top:-5px;
+    animation: colortext 3s linear infinite;
+}
+@keyframes anime{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+@keyframes colortext{
+    0%{
+        color: aqua;
+    }
+    20%{
+        color: blueviolet;
+    }
+    40%{
+        color: yellow;
+    } 
+    60%{
+        color: coral;
+    }
+    80%{
+        color: magenta;
+    }
+    100%{
+        color: green;
+    }
+}
