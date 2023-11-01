@@ -38,3 +38,29 @@
 // let boy = ["pheak", "meng", "huy", "ang"]
 // const full = boy.concat(girl);
 // console.log(full.join(" "));
+
+// Array methods - help you to work with Array
+//reverse() -  reverse thr elements in an array //reverse = បញ្ចាស់
+//sort() - sort an array alphabetically
+
+//Ex1
+// let name = ["nita", "lida", "bopha", "yaya"];
+// let number = [10, 11, 12, 22, 33];
+
+// let alphabet = ["a","b", "c"];
+
+// console.log(name.reverse().join(" "));
+// console.log(number.reverse().join(" "));
+// console.log(alphabet.reverse().join(" "));
+
+//Ex2
+let name = ["nita", "lida", "bopha", "yaya"];
+let number = [32, 11, 12, 22, 33, 100];
+
+let alphabet = ["a","d", "c"];
+
+console.log(name.sort().join(" "));
+console.log(alphabet.sort().join(" "));
+console.log(number.sort(function(a,b){
+    return a-b;
+}).join(" "));
