@@ -5,7 +5,7 @@ const months = [
     "january", "february", "march", "april", "may","june", "july", "august", "september", "october", "november", "december"
 ];
 
-const days = [
+const ee = [
     "Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
 ];
 
@@ -22,8 +22,8 @@ const days = [
 //get () - output
 const date = new Date();
 
-const day = date.getDay();
+const e = date.getDay();
 
-console.log(day);
+console.log(e);
 
 console.log(date);
