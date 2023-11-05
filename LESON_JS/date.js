@@ -24,6 +24,6 @@ const date = new Date();
 
 const day = date.getDay();
 
-console.log(days[day]);
+console.log(day);
 
 console.log(date);
